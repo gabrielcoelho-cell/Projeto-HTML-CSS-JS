@@ -1,0 +1,142 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Alinha no topo */
+    padding-top: 50px;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.container {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 500px;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+/* --- Input e Botão --- */
+.input-container {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+#inputTarefa {
+    flex-grow: 1;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+#btnAdicionar {
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#btnAdicionar:hover {
+    background-color: #0056b3;
+}
+
+/* --- Feedback (Tópico 2) --- */
+#mensagemFeedback {
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 15px;
+    padding: 8px;
+    border-radius: 4px;
+    display: none; /* Começa escondido */
+}
+
+/* Cores do Feedback (Tópico 2) */
+.feedback-sucesso {
+    background-color: #e6ffe6; /* Fundo Verde claro */
+    color: #28a745; /* Texto Verde (Sucesso) */
+    border: 1px solid #28a745;
+}
+
+.feedback-erro {
+    background-color: #ffe6e6; /* Fundo Vermelho claro */
+    color: #dc3545; /* Texto Vermelho (Erro) */
+    border: 1px solid #dc3545;
+}
+
+/* --- Lista de Tarefas --- */
+#listaDeTarefas {
+    list-style: none;
+    padding: 0;
+}
+
+.tarefa-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    margin-bottom: 8px;
+    background-color: #f9f9f9;
+    border-radius: 4px;
+    border-left: 5px solid #007bff;
+    /* Para a funcionalidade de drag-and-drop (Tópico 5) */
+    cursor: grab; 
+}
+
+.tarefa-item.dragging {
+    opacity: 0.5;
+    border: 2px dashed #007bff;
+}
+
+.tarefa-texto {
+    flex-grow: 1;
+    margin-right: 10px;
+    /* Evita que o texto se quebre muito */
+    word-break: break-all; 
+}
+
+.tarefa-botoes button {
+    margin-left: 5px;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+/* Botão de Excluir (Tópico 3) */
+.btn-excluir {
+    background-color: #dc3545;
+    color: white;
+}
+
+.btn-excluir:hover {
+    background-color: #c82333;
+}
+
+/* Botão de Editar (Tópico 4) */
+.btn-editar, .btn-salvar {
+    background-color: #ffc107;
+    color: #333;
+}
+
+.btn-editar:hover, .btn-salvar:hover {
+    background-color: #e0a800;
+}
+
+/* Estilo para a imagem PNG (Tópico 6) */
+.tarefa-png {
+    width: 20px; /* Tamanho do ícone/imagem */
+    height: 20px;
+    margin-right: 10px;
+}
